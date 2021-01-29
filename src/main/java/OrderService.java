@@ -9,7 +9,7 @@ public class OrderService {
     }
 
     public void addOrder(Order order){
-        orderDB.getMapOfOrders().put(order.getOrderId(), order.getProduct());
+        orderDB.getMapOfOrders().put(order.getOrderId(), order);
     }
 
 

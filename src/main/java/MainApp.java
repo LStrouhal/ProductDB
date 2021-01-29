@@ -11,6 +11,7 @@ public class MainApp {
 
         Order order1 = new Order(1, product1);
         Order order2 = new Order(4, product3);
+        Order order3 = new Order(5, product2);
 
         OrderDB orderDB = new OrderDB(new HashMap<>());
         orderDB.add(order1);
@@ -22,11 +23,13 @@ public class MainApp {
         productDB.add(product3);
         productDB.add(product4);
 
-        System.out.println(productDB.toString());
+        OrderService orderService = new OrderService(orderDB, productDB);
+
+        //System.out.println(productDB.toString());
         System.out.println(orderDB.toString());
 
-        OrderService.addOrder(order2);
-
+        orderService.addOrder(order3);
+        System.out.println(orderDB.toString());
 
     }
 
