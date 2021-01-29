@@ -10,12 +10,25 @@ public class ProductDB {
         this.mapOfProducts = mapOfProducts;
     }
 
+    public HashMap<Integer, Product> getMapOfProducts() {
+        return mapOfProducts;
+    }
+
+    public void setMapOfProducts(HashMap<Integer, Product> mapOfProducts) {
+        this.mapOfProducts = mapOfProducts;
+    }
+
     @Override
     public String toString() {
-        return "ProductDB{" +
-                "mapOfProducts=" + mapOfProducts +
+        return
+                "Map of Products" + mapOfProducts +
                 '}';
     }
+
+    /*public String mapOfProductsToString(){
+        return mapOfProducts.get();
+    }*/
+
 
     public void add (Product product) {
         mapOfProducts.put(product.getProductID(), product);
